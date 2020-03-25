@@ -1,1 +1,8 @@
-%h1 This is the index page.
+%h1 Fuck you, this is the index page.
+- @posts.each do |post|
+%h2 = post.title, post
+%p
+Whipped dis shit out at
+= time_ago_in_words(post.created_at)
+
+= link_to "New Post", new_post_path
