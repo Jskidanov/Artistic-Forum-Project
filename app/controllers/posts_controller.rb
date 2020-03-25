@@ -2,15 +2,15 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   
   def index
-    @posts = Posts.all.order("created_at DESC")
+    @posts = Post.all.order("created_at DESC")
   end
 
   def new
-    @post = Post.new
+    @post = make_post
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = make_post(post_params)
     if @post.save 
       redirect_to @post
     else 
@@ -48,6 +48,10 @@ class PostsController < ApplicationController
 
   def find_post
     @post = Post.find(params[:id])
+  end
+
+  def make_post(post_params=nil)
+    current_user.posts.build(post_params)
   end
 
 end
