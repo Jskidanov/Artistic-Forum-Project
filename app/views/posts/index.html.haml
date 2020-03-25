@@ -1,8 +1,8 @@
-%h1 Fuck you, this is the index page.
-- @posts.each do |post|
- %h2= link_to post.title, post
- %p
- Whipped dis shit out at:
- = time_ago_in_words(post.created_at) + " ago"
-%p
-= link_to "New Post", new_post_path
+#posts
+ - @posts.each do |post|
+  .post
+   %h2.title= link_to post.title, post
+   %p.date
+    Created
+    = time_ago_in_words(post.created_at) + " ago by: "
+    = post.user.email
