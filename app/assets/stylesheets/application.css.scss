@@ -30,6 +30,7 @@
  .clearfix:after {
   clear: both;
  }
+
  .main_header {
   width: 100%;
   margin: 0 auto;
@@ -45,6 +46,7 @@
     color: #397CAC;
    }
   }
+
   #buttons {
    float: right;
    a {
@@ -58,6 +60,7 @@
    }
   }
  }
+
  #posts {
   background: white;
   padding: 2em 5%;
@@ -82,6 +85,15 @@
    }
   }
  }
+ .button {
+  color: #397CAC;
+  border: 1px solid #397CAC;
+  padding: .5em 1em;
+  border-radius: 0.2em;
+  text-decoration: none; 
+  margin-right: 2%;
+ }
+
  #post_content {
   background: white;
   padding: 2em 5%;
@@ -93,11 +105,12 @@
    margin-top: 0;
   }
   p {
-   color: #B2BAC2;
+   color: #3b4753;
    font-size: 0.9em;
    line-height: 1.5;
    font-size: 100;
   }
+  
   #comments {
    .comment {
     border-bottom: 1px solid #d1d1d1;
@@ -132,6 +145,21 @@
      font-size: 0.6rem;
      font-weight: 700;
     }
+   }
+   input[type="submit"] {
+    background: #397CAC;
+    border: none;
+    color: white;
+    font-weight: 100;
+    padding: .5em 1em;
+    border-radius: .2em;
+   }
+   textarea {
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid #d1d1d1;
+    border-radius: .2em;
+    margin: 1em 0;
    }
   }
  }
